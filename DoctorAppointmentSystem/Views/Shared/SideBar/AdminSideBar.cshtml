@@ -1,0 +1,29 @@
+﻿<!--
+           Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+       -->
+<div class="logo">
+    <a class="simple-text logo-mini">
+        <div class="logo-image-small">
+            <i class="nc-icon nc-bank"></i>
+        </div>
+    </a>
+    <a class="simple-text logo-normal" style="cursor:pointer">
+        Admin Panel
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <ul class="nav">
+        <li id="Doctor">
+            <a href="@Url.Action("GetAllDoctorUsers","Admin")">
+                <i class="nc-icon nc-single-02"></i>
+                <p>Doctors</p>
+            </a>
+        </li>
+        <li id="Patient">
+            <a href="@Url.Action("GetAllPatientUsers","Admin")">
+                <i class="nc-icon nc-single-02"></i>
+                <p>Patients</p>
+            </a>
+        </li>
+    </ul>
+</div>

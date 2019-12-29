@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "My Appointments";
+}
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">My Appointments</h4>
+        </div>
+        <div class="card-body">
+            <table class="table" id="tableData">
+                <thead class="text-primary">
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Patient Name
+                        </th>
+                        <th>
+                            Start Time
+                        </th>
+                        <th>
+                            End Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+
+                    <tr hidden id="dataRow">
+                        <td id="No"></td>
+                        <td id="fullName"></td>
+                        <td id="startTime"></td>
+                        <td id="endTime"></td>
+                        <td id="status"></td>
+                        <td id="action"></td>
+                    </tr>
+
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">Add Prescription </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <label id="myPrescriptionId" hidden></label>
+                    <label>Prescription Detail</label>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="10" cols="40" id="prescriptionDetail"></textarea>
+                    </div>
+                    <label id="showError" style="color:red" hidden>Prescription detail is required</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left-side">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                </div>
+                <div class="divider"></div>
+                <div class="right-side">
+                    <button type="button" class="btn btn-success btn-simple" onclick="savePrescriptionDetail()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    end modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModalPrescription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">View Prescription</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <label id="myPrescriptionId" hidden></label>
+                    <label>Prescription Detail</label>
+                    <div class="form-group" id="viewAddedPrescreption">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left-side">
+                </div>
+                <div class="divider"></div>
+                <div class="right-side">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    end modal -->
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#appointments").addClass("active");
+        });
+    </script>
+<script src="~/Scripts/CustomJS/Doctor/scheduled-appointments.js"></script>
+}

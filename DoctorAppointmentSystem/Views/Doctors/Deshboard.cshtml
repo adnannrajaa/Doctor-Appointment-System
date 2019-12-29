@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "List of Appointments";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">List of Appointments</h4>
+        </div>
+        <div class="card-body">
+            <table class="table" id="tableData">
+                <thead class="text-primary">
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Patient Name
+                        </th>
+                        <th>
+                            Start Time
+                        </th>
+                        <th>
+                            End Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+
+                    <tr hidden id="dataRow">
+                        <td id="No"></td>
+                        <td id="fullName"></td>
+                        <td id="startTime"></td>
+                        <td id="endTime"></td>
+                        <td id="status"></td>
+                        <td id="action"></td>
+                    </tr>
+
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#deshborad").addClass("active");
+        });
+    </script>
+<script src="~/Scripts/CustomJS/Doctor/list-appointments.js"></script>
+}

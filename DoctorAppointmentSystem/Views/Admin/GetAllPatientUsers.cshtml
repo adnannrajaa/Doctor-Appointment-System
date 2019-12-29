@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Patients";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Patients</h4>
+        </div>
+        <div class="card-body">
+            <table class="table" id="tableData">
+                <thead class="text-primary">
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            User Name
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+
+                    <tr hidden id="dataRow">
+                        <td id="No"></td>
+                        <td id="firstName"></td>
+                        <td id="lastName"></td>
+                        <td id="userName"></td>
+                        <td id="status"></td>
+                        <td id="action"></td>
+                    </tr>
+
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#Patient").addClass("active");
+        });
+    </script>
+<script src="~/Scripts/CustomJS/Admin/get-all-patient-users.js"></script>
+<script src="~/Scripts/CustomJS/Admin/users.js"></script>
+}

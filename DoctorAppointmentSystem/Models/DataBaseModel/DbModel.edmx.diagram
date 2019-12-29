@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bba8df3e398547d2a7a0a88c09990694" Name="Diagram1">
+        <EntityTypeShape EntityType="DoctorAppoinmentDbModel.Availability" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="DoctorAppoinmentDbModel.PatientRequest" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="DoctorAppoinmentDbModel.Prescription" Width="1.5" PointX="7.5" PointY="4.375" />
+        <EntityTypeShape EntityType="DoctorAppoinmentDbModel.Role" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="DoctorAppoinmentDbModel.User" Width="1.5" PointX="3" PointY="2.25" />
+        <AssociationConnector Association="DoctorAppoinmentDbModel.FK_Availability_Users1" />
+        <AssociationConnector Association="DoctorAppoinmentDbModel.FK_PatientRequests_Users" />
+        <AssociationConnector Association="DoctorAppoinmentDbModel.FK_Prescriptions_PatientRequests" />
+        <AssociationConnector Association="DoctorAppoinmentDbModel.FK_Users_Roles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
